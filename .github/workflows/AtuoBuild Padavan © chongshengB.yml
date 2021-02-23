@@ -16,7 +16,7 @@ env:
   FIRMWARE_NAME: "YK-L1"			# 要编译的设备，多个设备用空格分隔
   FIRMWARE_VERSION: 20210223				# 自定义固件版本
   FIRMWARE_AUTHOR: chongshengB				# 源码作者
-  CREATE_RELEASE: OFF						# 创建release，仅第一次编译需要为ON，之后除非删除release，则为OFF
+  CREATE_RELEASE: ON						# 创建release，仅第一次编译需要为ON，之后除非删除release，则为OFF
   UPLOAD_RELEASE: OFF						# 发布release，若第一次编译未创建release，请设为OFF
   UPLOAD_COWTRANSFER: ON					# 上传至奶牛盘
   UPLOAD_WETRANSFER: OFF					# 上传至WETRANSFER
