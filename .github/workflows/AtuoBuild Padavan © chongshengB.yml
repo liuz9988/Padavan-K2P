@@ -14,7 +14,7 @@ env:
   WORK_PATH: /home/rt-n56u					# 工作目录
   FIRMWARE_PATH: /home/firmwares			# 固件规范名称后存放目录
   FIRMWARE_NAME: "YK-L1"			# 要编译的设备，多个设备用空格分隔
-  FIRMWARE_VERSION: 20210223				# 自定义固件版本
+  FIRMWARE_VERSION: 20210125				# 自定义固件版本
   FIRMWARE_AUTHOR: chongshengB				# 源码作者
   CREATE_RELEASE: ON						# 创建release，仅第一次编译需要为ON，之后除非删除release，则为OFF
   UPLOAD_RELEASE: OFF						# 发布release，若第一次编译未创建release，请设为OFF
@@ -97,7 +97,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> .config #smartdns二进制文件
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
-        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config #集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
         echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >> .config #KP广告过滤
         echo "CONFIG_FIRMWARE_INCLUDE_CADDY=n" >> .config #在线文件管理服务
         echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >> .config #集成caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
